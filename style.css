@@ -8,8 +8,8 @@
 }
 
 .body{
-   /*background-color: rgb(255, 255, 255) ;
-    color: black;*/
+   background-color: rgb(255, 255, 255) ;
+    color: black;
 
   }
 
@@ -37,4 +37,22 @@ width: 14px;
  font-weight: bold;
 align-items: center;
 font-size: 13px;
+}
+
+.library{
+  min-height: 80vh;
+position: relative;
+} 
+.right{
+margin: 16px 0;
+
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(19, 19, 19 );
+}
+.header > *{
+  padding: 20px;
+  background-color: rgb(19, 19, 19 );
 }
