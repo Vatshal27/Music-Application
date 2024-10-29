@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-s serif;
+}
+
+.body{
+   background-color: rgb(255, 255, 255) ;
+    color: black;
+
+  }
+
+.left{
+width: 25vw;
+padding: 34px;
+}
+.right{
+    width: 75vw;
+    position: relative;
+}
+ 
+.home ul li{ 
+  display: flex;
+  gap: 15px;
+width: 14px;
+ padding-top: 14px;
+ font-weight: bold;
+ }
+.heading{
+  display: flex;
+  gap: 15px;
+  width: 30px;
+ padding-top: 14px;
+ padding:23px 14px ;
+ font-weight: bold;
+align-items: center;
+font-size: 13px;
+}
+
+.library{
+  min-height: 80vh;  
+position: relative;
+} 
+.right{
+margin: 16px 0;
+
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(19, 19, 19 );
+}
+.header > *{
+  padding: 20px;
+  background-color: rgb(19, 19, 19 );
+}
+.playlist{
+   padding: 16px;
+}
+.cardcontainer{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 30px;
+  max-height: 80vh;
+  overflow: scroll;
+}
+
+.card{
+  position: relative;
+  width: 250px;
+  padding: 10px;
+   border-radius:  5px; 
+   background-color: gray;
+}
+.card > *{
+padding-top: 10px;
+}
+
+.card img{
+  width: 250px;
+ 
+border: 2px solid red;
+}
+.play{
+  position:absolute;
+  bottom:53px;
+  right:38px;
+  color: white;
+  width: 48;
+  height: 48;
+  fill: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.buttons > *{
+  margin: 0 12px;
+}
+
+.signupbtn{
+  background-color: black;
+    color: rgb(255, 249, 249);
+  border-radius: 10px;
+  padding: 6px;  
+  font-weight: bold;
+  border: none;
+  outline: nones;
+  cursor: pointer;
+}
+.signupbtn:hover{
+  font-size: 17px;
+  
+color:white;
+}
+.loginbtn{
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding:6px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  outline: nones;
+  cursor: pointer;
+}
+.loginbtn:hover{
+  font-size: 17px;
+}
+.playbar{
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(76, 150, 76);
+  width: 90%;
+  padding: 12px;
+}
+.songbtns{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
