@@ -8,7 +8,8 @@
     <title>VIBESTREAMS </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;
+0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container flex bg-black ">
@@ -23,13 +24,19 @@
             <div class="library bg-gray rounded m-1 p-1">
                <div class="heading">
                 <img class="invert" src="playlist.svg" alt="">
-               </div>
+              
                <h2>
                 Your library
-
-               </h2>
-                
+              </h2>
+           </div>
+           <div class="songlist">
+         <ul>                                                                                                                                                   
+            <h3>SONGS</h3>
+            
+            
+              </ul>
             </div>
+           </div>
         </div>
 
         <div class="right bg-gray rounded p-1">
@@ -91,17 +98,25 @@
                    </div>
                 </div>
                 <div class="playbar">
-                <div class="songinfo"></div>
-                    <div class="songbtns">
-                <img src="prevsong.svg" alt="">
-                <img src="play.svg" alt="">
-                <img src="nextsong.svg" alt="">  
-              </div>     
-              <div class="songtime">
-                
-              </div>          
-                </div>
+                    <div class="seekbar">
+                        <div class="circle">
+                            
+                        </div>
+                    </div>
+                    <div class="abovebar">
+                         <div class="songinfo">
 
+                         </div>
+                          <div class="songbtns">
+                            <img id="previous" src="prevsong.svg" alt="">
+                           <img id="play" src="play.svg" alt="">
+                            <img id="next" src="nextsong.svg" alt="">  
+                          </div>     
+                         <div class="songtime">
+                 
+                         </div>          
+                       </div>
+               </div>
         </div>
     </div>
 
