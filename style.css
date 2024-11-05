@@ -9,11 +9,11 @@
 
 .body{
    background-color: rgb(255, 255, 255) ;
-    color: black;
+    color: white;
 
   }
 
-.left{
+.left{  
 width: 25vw;
 padding: 34px;
 }
@@ -60,6 +60,9 @@ margin: 16px 0;
 .playlist{
    padding: 16px;
 }
+.playlist.h1{
+ padding:16px ;
+}
 .cardcontainer{
   display: flex;
   gap: 10px;
@@ -67,6 +70,7 @@ margin: 16px 0;
   margin: 30px;
   max-height: 80vh;
   overflow-y:scroll;
+
 }
 
 .card{
@@ -82,7 +86,6 @@ padding-top: 10px;
 
 .card img{
   width: 250px;
- 
 border: 2px solid red;
 }
 .play{
@@ -96,20 +99,7 @@ border: 2px solid red;
   margin: 10px;
   padding: 10px;
   font-family: "Roboto", sans-serif;
-}
-.buttons > *{
-  margin: 0 12px;
-}
 
-.signupbtn{
-  background-color: black;
-    color: rgb(255, 249, 249);
-  border-radius: 10px;
-  padding: 6px;  
-  font-weight: bold;
-  border: none;
-  outline: none;
-  cursor: pointer;
 }
 .signupbtn:hover{
   font-size: 17px;
@@ -129,26 +119,52 @@ border: 2px solid red;
   font-size: 17px;
 }
 .playbar{
-  position: fixed;
+ position: fixed;
   bottom: 30px;
   filter: invert(1);
- background:#dad5d5;
+  background: #dad5d5;
  border-radius: 30px;
   padding: 12px;
   width: 90%;
   width: 67vw;
-  height: 60px;
+  min-height: 40px;
 }
 .hamburger{
   display: none;
 }
+.close{
+  display: none;
+}
+.hamburgerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
 
 .songbtns{
   display: flex;
   justify-content: center;
-  
   gap: 10px;
 }
+.timevol{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.songinfo{
+  width: 250px;
+  text-transform: capitalize;
+} 
+.songtime{
+  width: 115px;        
+  color: black;
+  padding-bottom: 15px;                                                                                                                                                  
+}
+
+
 .songlist{
 height: 644px;
 overflow-y: auto;
@@ -168,12 +184,27 @@ margin-bottom:44px;
   margin: 12px 0;
   padding: 13px;
   border-radius: 5px;
+  text-transform: capitalize;
  }
+ 
+.volume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
 
  .songlist .info{
   font-size: 13px;
   width: 344px;
  }
+
+ .info div{
+  word-break: break-all;
+ }
+
+
+
 
  .playnow{
   display: flex;
@@ -188,18 +219,22 @@ padding: 12px;
 .seekbar{
 height: 6px;
 width: 96%;
-background-color: black;
+background-color: #72e6de;
+transition: background-color 0.3s ease; 
 cursor: pointer;
 border-radius:10px ;
 position: absolute;
 bottom: 0;
 margin:6px;
 }
+.seekbar:hover{
+  background-color: #80DEEA; 
+}
 .circle{
   width: 15px;
   height: 15px;
   border-radius: 13px;
-  background-color: black;
+  background-color: rgb(21, 172, 231);
   position: relative;
   bottom: 5px;
   left: 0%;
@@ -213,37 +248,76 @@ margin:6px;
 .songinfo, .songtime {
 color: black;
 padding-top: 15px;
-
-
+text-transform: capitalize;
 }
 .abovebar{
 display: flex;
 justify-content: space-between;
+margin: 20px 0 ;
+
 }
 
 @media (max-width: 1400px ) {
  .left{
-   background-color: rgb(0, 0, 0);
-   position:absolute;
-   left: -100%;
+  position:absolute;
+   left: -120%;
    transition:all 0.3s;
    z-index: 1;
-   width: 233px;
+   width: 370px;
+   background-color: black;
+   padding: 0;
  }
-  .right{
+  .left.close{
+    display: block;
+    position: absolute;
+    right: 31px;
+    top: 25px;
+    width: 29px;
+    background-color: black;
+  }
+ .right{
    width: 100vw;
-   background-color: rgb(3, 3, 3);
     height: 100%;
     padding: 0;
      margin:0; 
   }
-   .playbar{
-    width: 95vw;
-   }
+  .playbar{
+     width: calc(100vw-105vw);
 
-.hamburger{
+      font-size: 12px;
+   }
+   .seekbar{
+    width: 85%;
+    width: calc(100vw-120vw);
+   }
+   .hamburger{
   display: block;
 }
+.card{
+  width: 50vw;
+}
+.cardcontainer{
+  justify-content: center;
+  margin: 0;
+}
+
+
+.songinfo{
+  width: auto;
+} 
+.timevol{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: column;
+   gap: 13px;
+}
+
+.songtime {
+  color: black;
+  padding-bottom: 15px;
+  width: auto;
+  }
 }
 
  

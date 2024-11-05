@@ -1,10 +1,10 @@
 console.log('JAVASCRIPT');
 
 let currentSong= new Audio();
-
+let songs;
 function secondsToMinutesSeconds(seconds) {
    if (isNaN(seconds) || seconds < 0) {
-      return "Invalid input";
+      return "00:00 ";
    }
    const minutes = Math.floor(seconds / 60);
    const remainingSeconds = Math.floor(seconds % 60);
@@ -46,13 +46,13 @@ const playMusic = (track, pause=false) => {
 
 }
 
-
+                                                
 async function main(){
 
 
               
 //list of all songs
-let songs = await getSongs()
+ songs = await getSongs()
  playMusic(songs[0], true)
 
 //show songs in the playlist
@@ -95,7 +95,7 @@ currentSong.addEventListener("timeupdate", ()=> {
    console.log(currentSong.currentTime, currentSong.duration);
    document.querySelector(".songtime").innerHTML = `${secondsToMinutesSeconds(currentSong.currentTime)}/
    ${secondsToMinutesSeconds(currentSong.duration)}`
-   document.querySelector(".circle").style.left = (currentSong.currentTime/ currentSong.
+   document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.
       duration) *100 + "%";
 })
  
@@ -103,7 +103,47 @@ currentSong.addEventListener("timeupdate", ()=> {
  document.querySelector(".seekbar").addEventListener("click", e=>{
    let precent = (e.offsetX/e.target.getBoundingClientRect().width)*100 
  document.querySelector(".circle").style.left = precent + "%";
- currentSong.currentTime = ((currentSong.duration)*precent)/100
+ currentSong.currentTime = ((currentSong.duration)*precent) / 100
  })
+
+ //add an eventlis
+ // Open the sidebar when clicking the hamburger
+document.querySelector(".hamburger").addEventListener("click", () => {
+   document.querySelector(".left").style.left = "0%";
+});
+
+// Close the sidebar when clicking the hamburger again (toggle functionality)
+document.querySelector(".hamburger").addEventListener("dblclick", () => {
+   document.querySelector(".left").style.left = "-120%";
+});
+
+//add event listner yo prev next
+previous.addEventListener("click", ()=>{
+console.log("Prev clicked")
+console.log(currentSong)
+
+let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+if((index-1) >= 0)
+playMusic(songs[index-1])
+ })
+
+//event listener of next
+next.addEventListener("click", ()=>{
+   currentSong.pause()
+   console.log("Next clicked")
+   let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+
+   if((index+1) < songs.length)
+playMusic(songs[index+1])
+
+})
+
+
+//add event to vol
+document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e)=>{
+   console. log("Setting volume to ", e, e.target, e.target.value, "/ 100")
+   currentSong.volume = parseInt(e.target.value) / 100
+})
+
 }
 main()

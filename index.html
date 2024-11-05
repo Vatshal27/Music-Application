@@ -14,6 +14,9 @@
 <body>
     <div class="container flex bg-black ">
         <div class="left">
+            <div class="close">
+                <img width="30px" class="invert" src="close.svg" alt="">
+            </div>
             <div class="home bg-gray rounded m-1 p-1">
             <ul>
              <li><img class="invert" src="home.svg" alt="Home">Home</li>
@@ -27,7 +30,7 @@
               
                <h2>
                 Your library
-              </h2>
+              </h2> 
            </div>
            <div class="songlist">
          <ul>                                                                                                                                                   
@@ -42,9 +45,10 @@
         <div class="right bg-gray rounded p-1">
             <div class="header bg-gray">
                 <div class="nav">
-                    
-                        <img class="invert hamburger" src="hamburger.svg" alt="">
-              
+                     <div class="hamburgerContainer">
+                        <div class="hamburger">
+                            <img class="invert hamburger" src="hamburger.svg" alt="">
+                    </div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                      width="24" height="24" color="#000000" fill="none">
                         <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff" 
@@ -56,6 +60,7 @@
                         <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff" 
                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
+                </div>
                 </div>
                    <div class="buttons"> 
                     <button class="signupbtn">Sign Up</button>
@@ -100,14 +105,21 @@
 
                          </div>
                           <div class="songbtns">
-                            <img id="previous" src="prevsong.svg" alt="">
-                           <img id="play" src="play.svg" alt="">
-                            <img id="next" src="nextsong.svg" alt="">  
-                          </div>     
-                         <div class="songtime">
-                 
-                         </div>          
+                            <img  id="previous" src="prevsong.svg" alt="">
+                            <img  id="play" src="play.svg" alt="">
+                            <img  id="next" src="nextsong.svg" alt="">  
+                          </div>
+                          <div class="timevol">     
+                         <div class="songtime"></div>
+                            <div class="volume">
+                                <img width="25" src="vol.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="vol">
+                                </div>
+                            </div>     
+                              
                        </div>
+                    </div>
                </div>
         </div>
     </div>
